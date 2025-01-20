@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Shopee Seller Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto 250px;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        .header {
+            grid-column: 1 / 4;
+            background-color: #ee4d2d; /* Warna oranye */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .header .logout {
+            background-color: white;
+            color: #ee4d2d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .header .logout:hover {
+            background-color: #f75e3b;
+            color: white;
+        }
+
+        .sidebar {
+            grid-row: 2 / 4;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #f75e3b;
+        }
+
+        .sidebar a.active {
+            background-color: white;
+            color: #ee4d2d;
+        }
+
+        .content {
+            grid-row: 2 / 3;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .stats div {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats div h2 {
+            color: #ee4d2d;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .stats div p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .charts .chart {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation {
+            grid-row: 2 / 4;
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .navigation ul li span {
+            font-weight: bold;
+            color: #ee4d2d;
+        }
+
+        .keterangan {
+            grid-column: 1 / 4;
+            background-color: #ffffff;
+            padding: 15px;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div>Header</div>
+            <a href="logout.html" class="logout">Logout</a>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="logout.html">logout</a>
+            <a href="home.html" class="active">Home</a>
+            <a href="pesanan.html">Pesanan</a>
+            <a href="kesehatantoko.html">Kesehatan Toko</a>
+            <a href="performatoko.html">Performa Toko</a>
+            <a href="stokbarang.html">Stok Barang</a>
+            <a href="pengembalianbarang.html">Pengembalian Barang</a>
+            <a href="tambahproduk.html">Tambah Produk</a>
+            <a href="penilaian-toko.html">Penilaian Toko</a>
+            <a href="flashsale.html">Flash Sale</a>
+            <a href="diskontoko.html">Diskon Toko</a>
+            <a href="voucher.html">Voucher</a>
+            <a href="pusatpromosi.html">Pusat Promosi</a>
+            <a href="livedanvideo.html">Live dan Video</a>
+            <a href="chatcustomer.html">Chat Customer</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="stats">
+                <div>
+                    <h2>13</h2>
+                    <p>Belum Bayar</p>
+                </div>
+                <div>
+                    <h2>500</h2>
+                    <p>Perlu Dikirim</p>
+                </div>
+                <div>
+                    <h2>5000</h2>
+                    <p>Dalam Pengiriman</p>
+                </div>
+                <div>
+                    <h2>10</h2>
+                    <p>Menunggu Respon Pembatalan</p>
+                </div>
+                <div>
+                    <h2>34</h2>
+                    <p>Produk Habis</p>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">Grafik 1</div>
+                <div class="chart">Grafik 2</div>
+            </div>
+            <div class="keterangan">
+                <strong>Keterangan:</strong> Tampilan ini adalah tampilan awal setelah kita login atau tampilan pada home
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <h3>Navigasi</h3>
+            <ul>
+                <li><span>1.</span> Klik "Pesanan" akan ke T3</li>
+                <li><span>2.</span> Klik "Kesehatan Toko" akan ke T4</li>
+                <li><span>3.</span> Klik "Performa Toko" akan ke T5</li>
+                <li><span>4.</span> Klik "Stok Barang" akan ke T6</li>
+                <li><span>5.</span> Klik "Pengembalian Barang" akan ke T7</li>
+                <!-- Tambahkan lainnya sesuai kebutuhan -->
+            </ul>
+        </div>
+
+        <!-- Keterangan -->
+        <div class="keterangan">
+            <strong>Keterangan:</strong> Menampilkan menu beranda.
+        </div>
+    </div>
+</body>
+</html>

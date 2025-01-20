@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Live Stream Toko</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .navigation-menu {
+            width: 200px;
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        .navigation-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .navigation-menu li {
+            margin-bottom: 15px;
+        }
+        .navigation-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .navigation-menu a:hover, .navigation-menu a:focus {
+            background-color: white;
+            color: #ff5722;
+        }
+        .main-content {
+            margin-left: 220px; /* Space for navigation menu */
+            margin-right: 220px; /* Space for navigation */
+        }
+        .data-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .data-box div {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .data-box div:first-child {
+            margin-left: 0;
+        }
+        .data-box div:last-child {
+            margin-right: 0;
+        }
+        .description {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .navigation {
+            width: 200px;
+            background-color: #ffffff;
+            color: black;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+            border-left: 1px solid #ddd;
+        }
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+        .navigation li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-menu">
+        <ul>
+            <li><a href="logout.html">Logout</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="pesanan.html">Pesanan</a></li>
+            <li><a href="kesehatantoko.html">Kesehatan Toko</a></li>
+            <li><a href="performatoko.html">Performa Toko</a></li>
+            <li><a href="stokbarang.html">Stok Barang</a></li>
+            <li><a href="pengembalianbarang.html">Pengembalian Barang</a></li>
+            <li><a href="tambahproduk.html">Tambah Produk</a></li>
+            <li><a href="penilaiantoko.html">Penilaian Toko</a></li>
+            <li><a href="flashsale.html">Flash Sale</a></li>
+            <li><a href="diskontoko.html">Diskon Toko</a></li>
+            <li><a href="voucher.html">Voucher</a></li>
+            <li><a href="pusatpromosi.html">Pusat Promosi</a></li>
+            <li><a href="livedanvideo.html" class="active">Live dan Video</a></li>
+            <li><a href="chatcustomer.html">Chat Customer</a></li>
+        </ul>
+    </div>
+
+    <div class="content main-content">
+        <h1>Data Live Stream Toko</h1>
+        <label for="date">Periode Data</label>
+        <input type="date" id="date">
+
+        <div class="data-box">
+            <div>
+                <h2>Jumlah Livestream</h2>
+                <p>10.000</p>
+            </div>
+            <div>
+                <h2>Jumlah Durasi Livestream</h2>
+                <p>3 jam</p>
+            </div>
+            <div>
+                <h2>Rata-rata Jumlah Livestream</h2>
+                <p>5.000</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>Keterangan: Tampilan ini dapat melihat data-data live stream toko kita.</p>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <li>1. Klik "Chat Customer" akan ke T15</li>
+            <li>2. Klik "Pusat Promosi" akan ke T13</li>
+            <li>3. Klik "Voucher" akan ke T12</li>
+            <li>4. Klik "Diskon Toko" akan ke T11</li>
+            <li>5. Klik "Flash Sale" akan ke T10</li>
+            <li>6. Klik "Penilaian Toko" akan ke T9</li>
+            <li>7. Klik "Tambah Produk" akan ke T8</li>
+            <li>8. Klik "Pengembalian Barang" akan ke T7</li>
+            <li>9. Klik "Stok Barang" akan ke T6</li>
+            <li>10. Klik "Performa Toko" akan ke T5</li>
+            <li>11. Klik "Kesehatan Toko" akan ke T4</li>
+            <li>12. Klik "Pesanan" akan ke T3</li>
+            <li>13. Klik "Home" akan ke T2</li>
+        </ul>
+    </div>
+</body>
+</html>

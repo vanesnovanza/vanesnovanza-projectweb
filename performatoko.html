@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriteria Utama - Performa Toko</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto 250px;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        .header {
+            grid-column: 1 / 4;
+            background-color: #00555A; /* Warna hijau gelap */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .header .logout {
+            background-color: white;
+            color: #00555A;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .header .logout:hover {
+            background-color: #007377;
+            color: white;
+        }
+
+        .sidebar {
+            grid-row: 2 / 4;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #f75e3b;
+        }
+
+        .sidebar a.active {
+            background-color: white;
+            color: #ee4d2d;
+        }
+
+        .content {
+            grid-row: 2 / 3;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .content .cards .card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content .cards .card h3 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .content .cards .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .content .chart {
+            background-color: #f0f0f0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .navigation {
+            grid-row: 2 / 4;
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .navigation ul li span {
+            font-weight: bold;
+            color: #ee4d2d;
+        }
+
+        .keterangan {
+            grid-column: 1 / 4;
+            background-color: #ffffff;
+            padding: 15px;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Logo</div>
+            <a href="logout.html" class="logout">Logout</a>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="logout.html">logout</a>
+            <a href="home.html">Home</a>
+            <a href="pesanan.html">Pesanan</a>
+            <a href="kesehatantoko.html">Kesehatan Toko</a>
+            <a href="performatoko.html" class="active">Performa Toko</a>
+            <a href="stokbarang.html">Stok Barang</a>
+            <a href="pengembalianbarang.html">Pengembalian Barang</a>
+            <a href="tambahproduk.html">Tambah Produk</a>
+            <a href="penilaiantoko.html">Penilaian Toko</a>
+            <a href="flashsale.html">Flash Sale</a>
+            <a href="diskontoko.html">Diskon Toko</a>
+            <a href="voucher.html">Voucher</a>
+            <a href="pusatpromosi.html">Pusat Promosi</a>
+            <a href="livedanvideo.html">Live dan Video</a>
+            <a href="chatcustomer.html">Chat Customer</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h2>KRITERIA UTAMA</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Penjualan</h3>
+                    <p>Rp. 12,430,000</p>
+                    <p>vs kemarin +1.82%</p>
+                </div>
+                <div class="card">
+                    <h3>Pesanan</h3>
+                    <p>13</p>
+                    <p>vs kemarin -2.91%</p>
+                </div>
+                <div class="card">
+                    <h3>Tingkat Konversi</h3>
+                    <p>1.76%</p>
+                    <p>vs kemarin -1.54%</p>
+                </div>
+                <div class="card">
+                    <h3>Produk Dilihat</h3>
+                    <p>5,403</p>
+                    <p>vs kemarin +1.99%</p>
+                </div>
+            </div>
+            <div class="chart">
+                Grafik akan ditampilkan di sini
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <h3>Navigasi</h3>
+            <ul>
+                <li><span>1.</span> Klik "Stok Barang" akan ke T6</li>
+                <li><span>2.</span> Klik "Kesehatan Toko" akan ke T4</li>
+                <li><span>3.</span> Klik "Pesanan" akan ke T3</li>
+                <li><span>4.</span> Klik "Home" akan ke T2</li>
+            </ul>
+        </div>
+
+        <!-- Keterangan -->
+        <div class="keterangan">
+            <strong>Keterangan:</strong> Tampilan ini dapat melihat naik turunnya performa toko kita dari periode sebelumnya.
+        </div>
+    </div>
+</body>
+</html>

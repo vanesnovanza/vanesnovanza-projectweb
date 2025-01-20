@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Customer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .navigation-menu {
+            width: 200px;
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        .navigation-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+        }
+        .navigation-menu a:hover {
+            background-color: white;
+            color: #ff5722;
+        }
+        .navigation-menu a.active {
+            background-color: white;
+            color: #ff5722;
+            font-weight: bold;
+        }
+        .main-content {
+            margin-left: 220px;
+            flex: 1;
+        }
+        .chat-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .chat-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .chat-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .chat-item:hover {
+            background-color: #e0e0e0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: gray;
+        }
+        .right-navigation {
+            width: 200px;
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+            border-left: 1px solid #ccc;
+        }
+        .right-navigation a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .right-navigation a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: white;
+            background-color: #ff5722;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-menu">
+        <a href="logout.html">logout</a>
+        <a href="home.html">Home</a>
+        <a href="pesanan.html">Pesanan</a>
+        <a href="kesehatantoko.html">Kesehatan Toko</a>
+        <a href="performatoko.html">Performa Toko</a>
+        <a href="stokbarang.html">Stok Barang</a>
+        <a href="pengembalianbarang.html">Pengembalian Barang</a>
+        <a href="tambahproduk.html">Tambah Produk</a>
+        <a href="penilaiantoko.html">Penilaian Toko</a>
+        <a href="flashsale.html">Flash Sale</a>
+        <a href="diskontoko.html">Diskon Toko</a>
+        <a href="voucher.html">Voucher</a>
+        <a href="pusatpromosi.html">Pusat Promosi</a>
+        <a href="livedanvideo.html">Live dan Video</a>
+        <a href="chatcustomer.html" class="active">Chat Customer</a>
+    </div>
+    <div class="main-content">
+        <h1>Chat Customer</h1>
+        <div class="chat-container">
+            <div class="chat-header">
+                <select>
+                    <option>Chat Pembeli</option>
+                </select>
+                <input type="text" placeholder="Search">
+                <select>
+                    <option>Semua</option>
+                </select>
+            </div>
+            <ul class="chat-list">
+                <li class="chat-item">
+                    <img src="https://via.placeholder.com/40" alt="Profil">
+                    <span>Lorem ipsum dolor sit amet...</span>
+                </li>
+                <li class="chat-item">
+                    <img src="https://via.placeholder.com/40" alt="Profil">
+                    <span>Lorem ipsum dolor sit amet...</span>
+                </li>
+                <li class="chat-item">
+                    <img src="https://via.placeholder.com/40" alt="Profil">
+                    <span>Lorem ipsum dolor sit amet...</span>
+                </li>
+            </ul>
+        </div>
+            <div class="footer">
+             Keterangan: Tampilan ini adalah tampilan customer yang chat kita seperti menanyakan ketersedian produk dan lain lain
+              </div>
+    </div>
+    <div class="right-navigation">
+        <a href="#">Klik "Live dan Video" akan ke T14</a>
+        <a href="#">Klik "Pusat Promosi" akan ke T13</a>
+        <a href="#">Klik "Voucher" akan ke T12</a>
+        <a href="#">Klik "Diskon Toko" akan ke T11</a>
+        <a href="#">Klik "Flash Sale" akan ke T10</a>
+        <a href="#">Klik "Penilaian Toko" akan ke T9</a>
+        <a href="#">Klik "Tambah Produk" akan ke T8</a>
+        <a href="#">Klik "Pengembalian Barang" akan ke T7</a>
+        <a href="#">Klik "Stok Barang" akan ke T6</a>
+        <a href="#">Klik "Performa Toko" akan ke T5</a>
+        <a href="#">Klik "Kesehatan Toko" akan ke T4</a>
+        <a href="#">Klik "Pesanan" akan ke T3</a>
+        <a href="#">Klik "Home" akan ke T2</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pesanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto 300px;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #f75e3b;
+        }
+
+        .sidebar a.active {
+            background-color: white;
+            color: #ee4d2d;
+            font-weight: bold;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .status {
+            color: green;
+            font-weight: bold;
+        }
+
+        .action {
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navigation {
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            overflow-y: auto;
+        }
+
+        .navigation h3 {
+            margin-top: 0;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            margin-bottom: 10px;
+        }
+
+        .navigation ul li span {
+            font-weight: bold;
+            color: #ee4d2d;
+        }
+
+        .footer {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #ddd;
+            grid-column: 1 / span 3;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="logout.html">logout</a>
+            <a href="home.html">Home</a>
+            <a href="pesanan.html">Pesanan</a>
+            <a href="kesehatantoko.html">Kesehatan Toko</a>
+            <a href="performatoko.html">Performa Toko</a>
+            <a href="stokbarang.html">Stok Barang</a>
+            <a href="pengembalianbarang.html" class="active">Pengembalian Barang</a>
+            <a href="tambahproduk.html">Tambah Produk</a>
+            <a href="penilaiantoko.html">Penilaian Toko</a>
+            <a href="flashsale.html">Flash Sale</a>
+            <a href="diskontoko.html">Diskon Toko</a>
+            <a href="voucher.html">Voucher</a>
+            <a href="pusatpromosi.html">Pusat Promosi</a>
+            <a href="livedanvideo.html">Live dan Video</a>
+            <a href="chatcustomer.html">Chat Customer</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1>Data Pesanan</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Jumlah</th>
+                            <th>Alasan Pengajuan</th>
+                            <th>Solusi Pengajuan</th>
+                            <th>Status Pengajuan</th>
+                            <th>Pengiriman ke Pembeli</th>
+                            <th>Pengembalian ke Penjual</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Batik Arkanza Motif Renjana</td>
+                            <td>1</td>
+                            <td>Ingin mengembalikan barang sesuai kondisi awal</td>
+                            <td>Pengembalian</td>
+                            <td class="status">Sedang dalam Persetujuan</td>
+                            <td>15/01/2025 - SPX Standard</td>
+                            <td>17/01/2025 - J&T Express</td>
+                            <td class="action">Ajukan Banding</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <h3>Navigasi</h3>
+            <ul>
+                <li>Klik "Tambah Produk" akan ke T8</li>
+                <li>Klik "Stock Barang" akan ke T6</li>
+                <li>Klik "Performa Toko" akan ke T5</li>
+                <li>Klik "Kesehatan Toko" akan ke T4</li>
+                <li>Klik "Pesanan" akan ke T3</li>
+                <li>Klik "Home" akan ke T2</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <strong>Keterangan:</strong> Tampilan ini dapat melihat produk kita di pengembalian atau pengiriman gagal.
+        </div>
+    </div>
+</body>
+</html>

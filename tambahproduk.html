@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            background-color: #FF5722;
+            width: 200px;
+            color: white;
+            height: 100vh;
+            padding: 20px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .sidebar a.active, .sidebar a:hover {
+            background-color: white;
+            color: #FF5722;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .right-nav {
+            width: 200px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            height: 100vh;
+        }
+
+        .right-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .right-nav ul li {
+            margin-bottom: 10px;
+        }
+
+        .right-nav ul li a {
+            text-decoration: none;
+            color: #FF5722;
+            font-weight: bold;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 400px;
+            margin: auto;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #e64a19;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="logout.html">logout</a>
+        <a href="home.html">Home</a>
+        <a href="pesanan.html">Pesanan</a>
+        <a href="kesehatantoko.html">Kesehatan Toko</a>
+        <a href="performatoko.html">Performa Toko</a>
+        <a href="stokbarang.html">Stok Barang</a>
+        <a href="pengembalianbarang.html">Pengembalian Barang</a>
+        <a href="tambahproduk.html" class="active">Tambah Produk</a>
+        <a href="penilaiantoko.html">Penilaian Toko</a>
+        <a href="flashsale.html">Flash Sale</a>
+        <a href="diskontoko.html">Diskon Toko</a>
+        <a href="voucher.html">Voucher</a>
+        <a href="pusatpromosi.html">Pusat Promosi</a>
+        <a href="livedanvideo.html">Live dan Video</a>
+        <a href="chatcustomer.html">Chat Customer</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Edit Data Barang</h2>
+            <label for="kode">Kode</label>
+            <input type="text" id="kode" value="98" disabled>
+
+            <label for="nama">Nama Barang</label>
+            <input type="text" id="nama" value="Nareswara Navy">
+
+            <label for="harga-normal">Harga Normal</label>
+            <input type="text" id="harga-normal" value="219,000">
+
+            <label for="harga-coret">Harga Coret</label>
+            <input type="text" id="harga-coret" value="185,000">
+
+            <button>Submit</button>
+        </div>
+    </div>
+
+    <!-- Right Navigation -->
+    <div class="right-nav">
+        <ul>
+            <li><a href="#">Klik "Penilaian Toko" akan ke T9</a></li>
+            <li><a href="#">Klik "Pengembalian Barang" akan ke T7</a></li>
+            <li><a href="#">Klik "Stok Barang" akan ke T6</a></li>
+            <li><a href="#">Klik "Performa Toko" akan ke T5</a></li>
+            <li><a href="#">Klik "Kesehatan Toko" akan ke T4</a></li>
+            <li><a href="#">Klik "Pesanan" akan ke T3</a></li>
+            <li><a href="#">Klik "Home" akan ke T2</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    Keterangan: Tampilan ini dapat digunakan untuk mengedit data barang secara langsung.
+</div>
+
+</body>
+</html>

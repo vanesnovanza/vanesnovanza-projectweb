@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tampilan Ulasan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    /* Sidebar styling */
+    .sidebar {
+      width: 200px;
+      background-color: #ff5722;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .sidebar a.active {
+      background-color: white;
+      color: #ff5722;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    /* Content area styling */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .review {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .review strong {
+      font-size: 16px;
+      color: #ff5722;
+    }
+    .review p {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .review button {
+      float: right;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .review button:hover {
+      background-color: #0056b3;
+    }
+    /* Footer styling */
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+    /* Navigation styling */
+    .navigation {
+      padding: 20px;
+      width: 200px;
+      background-color: #f4f4f4;
+      border-left: 1px solid #ddd;
+    }
+    .navigation a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="logout.html" class="menu-item">logout</a>
+    <a href="home.html" class="menu-item">Home</a>
+    <a href="pesanan.html" class="menu-item">Pesanan</a>
+    <a href="kesehatantoko.html" class="menu-item">Kesehatan Toko</a>
+    <a href="performatoko.html" class="menu-item">Performa Toko</a>
+    <a href="stokbarang.html" class="menu-item">Stok Barang</a>
+    <a href="pengembalianbarang.html" class="menu-item">Pengembalian Barang</a>
+    <a href="tambahproduk.html" class="menu-item">Tambah Produk</a>
+    <a href="penilaiantoko.html" class="active">Penilaian Toko</a>
+    <a href="flashsale.html" class="menu-item">Flash Sale</a>
+    <a href="diskontoko.html" class="menu-item">Diskon Toko</a>
+    <a href="voucher.html" class="menu-item">Voucher</a>
+    <a href="pusatpromosi.html" class="menu-item">Pusat Promosi</a>
+    <a href="livedanvideo.html" class="menu-item">Live dan Video</a>
+    <a href="chatcustomer.html" class="menu-item">Chat Customer</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>Ulasan Produk</h1>
+    <div class="review">
+      <strong>zai**</strong>
+      <p>Produk sangat bagus, kualitas sesuai deskripsi. Pengiriman cepat. Terima kasih!</p>
+      <button>Balas</button>
+    </div>
+    <div class="review">
+      <strong>ana**</strong>
+      <p>Barang diterima dengan baik. Namun, kemasan sedikit rusak, mohon diperhatikan lagi.</p>
+      <button>Balas</button>
+    </div>
+    <div class="review">
+      <strong>ril**</strong>
+      <p>Pelayanan ramah, namun warna produk tidak sesuai ekspektasi. Semoga lebih baik ke depannya.</p>
+      <button>Balas</button>
+    </div>
+    <div class="review">
+      <strong>ket**</strong>
+      <p>Pengiriman terlalu lama, tetapi kualitas produk tetap oke. Mohon perbaiki waktu pengirimannya.</p>
+      <button>Balas</button>
+    </div>
+    <div class="footer">Keterangan: Tampilan ini dapat melihat rating dan ulasan positif dan negatif customer terkait produk kita.</div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="navigation">
+    <h2>Navigasi</h2>
+    <ul>
+      <li><a href="#">1. Klik "Flash Sale" akan ke T10</a></li>
+      <li><a href="#">2. Klik "Tambah Produk" akan ke T8</a></li>
+      <li><a href="#">3. Klik "Pengembalian Barang" akan ke T7</a></li>
+      <li><a href="#">4. Klik "Stok Barang" akan ke T6</a></li>
+      <li><a href="#">5. Klik "Performa Toko" akan ke T5</a></li>
+      <li><a href="#">6. Klik "Kesehatan Toko" akan ke T4</a></li>
+      <li><a href="#">7. Klik "Pesanan" akan ke T3</a></li>
+      <li><a href="#">8. Klik "Home" akan ke T2</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

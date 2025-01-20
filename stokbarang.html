@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto 250px;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #f75e3b;
+        }
+
+        .sidebar a.active {
+            background-color: white;
+            color: #ee4d2d;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .content .search-bar input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .content .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .navigation {
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .navigation ul li span {
+            font-weight: bold;
+            color: #ee4d2d;
+        }
+
+        .keterangan {
+            background-color: #ffffff;
+            padding: 15px;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            color: #555;
+            grid-column: 1 / 4;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .actions button {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 5px 8px;
+            cursor: pointer;
+        }
+
+        .actions button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="logout.html">logout</a>
+            <a href="home.html">Home</a>
+            <a href="pesanan.html">Pesanan</a>
+            <a href="kesehatantoko.html">Kesehatan Toko</a>
+            <a href="performatoko.html">Performa Toko</a>
+            <a href="stokbarang.html" class="active">Stok Barang</a>
+            <a href="pengembalianbarang.html">Pengembalian Barang</a>
+            <a href="tambahproduk.html">Tambah Produk</a>
+            <a href="penilaiantoko.html">Penilaian Toko</a>
+            <a href="flashsale.html">Flash Sale</a>
+            <a href="diskontoko.html">Diskon Toko</a>
+            <a href="voucher.html">Voucher</a>
+            <a href="pusatpromosi.html">Pusat Promosi</a>
+            <a href="livedanvideo.html">Live dan Video</a>
+            <a href="chatcustomer.html">Chat Customer</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1>Stok Barang</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Cari barang...">
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga Beli</th>
+                            <th>Harga Jual</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>001</td>
+                            <td>Tirta Amarta</td>
+                            <td>Rp 219.000</td>
+                            <td>Rp 185.000</td>
+                            <td>500</td>
+                            <td class="actions">
+                                <button>+</button>
+                                <button>X</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>002</td>
+                            <td>Nareswara Navy</td>
+                            <td>Rp 219.000</td>
+                            <td>Rp 185.000</td>
+                            <td>500</td>
+                            <td class="actions">
+                                <button>+</button>
+                                <button>X</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>003</td>
+                            <td>Pradipta</td>
+                            <td>Rp 219.000</td>
+                            <td>Rp 185.000</td>
+                            <td>500</td>
+                            <td class="actions">
+                                <button>+</button>
+                                <button>X</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>004</td>
+                            <td>Pradipta Adji</td>
+                            <td>Rp 219.000</td>
+                            <td>Rp 185.000</td>
+                            <td>500</td>
+                            <td class="actions">
+                                <button>+</button>
+                                <button>X</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <h3>Navigasi</h3>
+            <ul>
+                <li><span>1.</span> Klik "Pengembalian Barang" akan ke T7</li>
+                <li><span>2.</span> Klik "Performa Toko" akan ke T5</li>
+                <li><span>3.</span> Klik "Kesehatan Toko" akan ke T4</li>
+                <li><span>4.</span> Klik "Pesanan" akan ke T3</li>
+                <li><span>5.</span> Klik "Home" akan ke T2</li>
+            </ul>
+        </div>
+
+        <!-- Keterangan -->
+        <div class="keterangan">
+            <strong>Keterangan:</strong> Tampilan daftar produk kita dan ketersediaan stok barangnya.
+        </div>
+    </div>
+</body>
+</html>
